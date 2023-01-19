@@ -6,8 +6,8 @@ from flask import Flask, Response, request
 app = Flask(__name__)
 
 @app.route("/")
-def headers():
-    return '<br/>'.join(['%s => %s' % (key, value) for (key, value) in request.headers.items()])
+def index():
+    return 'Web App with Python Flask!'
 
 @app.route("/favicon.ico")
 def favicon():
