@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return 'Web App with Python Flask!'
+    return 'retrouvez Wyzlock bientôt ici!'
 
 @app.route("/favicon.ico")
 def favicon():
