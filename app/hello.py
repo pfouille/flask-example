@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-
+import numpy as np
 import platform
 import subprocess
 from flask import Flask, Response, request
@@ -7,7 +7,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return 'retrouvez Wyzlock bientôt ici!'
+    vecteur = np.array([1,2,3,4)]
+    reponse = 'vecteur =' + vecteur
+    return reponse
 
 @app.route("/favicon.ico")
 def favicon():
