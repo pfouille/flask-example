@@ -1,1 +1,3 @@
 flask
+numpy
+psycopg2>=2.7 --no-binary psycopg2
