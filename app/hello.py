@@ -7,8 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    vecteur = np.array([1,2,3,4)]
-    reponse = 'vecteur =' + vecteur
+    reponse = 'Retrouvez-nous bientôt ici'
     return reponse
 
 @app.route("/favicon.ico")
