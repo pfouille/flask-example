@@ -1,0 +1,46 @@
+<!DOCTYPE html><html><head><meta charset="utf-8" /><title id="pageTitle">Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{ 
+font-family: 'Quicksand', sans-serif;
+max-width: 100vw;
+padding: 10px;
+--warp-view-font-color: #404040;
+}
+discovery-dashboard {
+color: transparent;
+}
+.heading {position: relative; width: 100%;min-height: 50px;}
+.heading a { position: absolute; top: 10px; left: 10px;}
+.heading img { max-height: 30px; }
+</style>
+<style>.none{}</style>
+</head>
+<body>
+<div class="heading">
+<a href="https://senx.io" target="_blank"><img src="https://senx.io/assets/img/senx_header_dark.png" alt="SenX" ></a>
+</div>
+
+<discovery-dashboard url="https://sandbox.senx.io/api/v0/exec" dashboard-title="Test" cols="12" cell-height="220">
+
+{
+'title' 'Test' 
+'description' 'Dashboard test' 
+'tiles' [ {
+'title' 'test' 
+'options' {
+'autoRefresh' 1 
+} 
+'x' 0 
+'y' 0 
+'w' 12 
+'h' 2 
+'type' 'area' 
+'macro' <% 1 4 <% DROP NEWGTS 'g' STORE 1 10 <% 'ts' STORE 'g' LOAD 'ts' LOAD RAND + STU * NOW + NaN NaN NaN RAND ADDVALUE DROP %> FOR 'g' LOAD %> FOR %> 
+} ] 
+} 
+</discovery-dashboard>
+
+<script nomodule src="https://unpkg.com/@senx/discovery-widgets/dist/discovery/discovery.js"></script>
+<script type="module" src="https://unpkg.com/@senx/discovery-widgets/dist/discovery/discovery.esm.js"></script>
+</body></html>
