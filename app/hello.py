@@ -2,7 +2,9 @@
 import platform
 import subprocess
 from flask import Flask, Response, request
-app = Flask(__name__)
+app = Flask(__name__,
+           static_url_path='', 
+           static_folder='static')
 
 @app.route("/")
 def headers():
