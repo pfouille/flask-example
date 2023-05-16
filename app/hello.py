@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def headers():
-    return 'Hello Open lab BZH !!!'
+    return 'Hello RC !!!'
 
 @app.route("/favicon.ico")
 def favicon():
